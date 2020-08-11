@@ -1,0 +1,33 @@
+{
+	"extends": ["tslint:all", "tslint-react", "tslint-config-airbnb", "tslint-config-prettier"],
+	"linterOptions": {
+		"exclude": ["node_modules/**"]
+	},
+	"rules": {
+		"import-name": false,
+		"jsx-boolean-value": false,
+		"ordered-imports": false,
+		"no-implicit-dependencies": false,
+		"no-import-side-effect": false,
+		"no-submodule-imports": false,
+		"interface-name": [true, "never-prefix"],
+		"no-default-export": false,
+		"no-default-import": false,
+		"typedef": [true, "call-signature", "parameter", "member-variable-declaration"],
+		"object-literal-sort-keys": false,
+		"no-null-keyword": false,
+		"interface-over-type-literal": false,
+		"match-default-export-name": false,
+		"object-shorthand-properties-first": false,
+		"variable-name": false,
+		"member-ordering": false,
+		"strict-boolean-expressions": false,
+		"semicolon": [true, "always"],
+		"no-empty-interface": false,
+		"function-name": false,
+		"only-arrow-functions": false,
+		"file-name-casing": [true, "camel-case", "kebab-case"],
+		"comment-format": false,
+		"no-object-literal-type-assertion": false
+	}
+}

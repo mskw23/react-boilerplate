@@ -1,0 +1,80 @@
+{
+	"name": "react-boilerplate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.tsx",
+	"scripts": {
+		"start": "webpack-dev-server --open --mode development",
+		"build": "webpack --mode production",
+		"lint": "tslint --project tsconfig.json 'src/**/*.ts?(x)'",
+		"lint:fix": "tslint --project tsconfig.json 'src/**/*.ts?(x)' --fix",
+		"test": "jest",
+		"doc": "typedoc --readme README.md",
+		"format": "prettier --write 'src/**/*.+(ts|tsx|scss|json)'"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.+(ts|tsx)": [
+			"tslint --project tsconfig.json --fix",
+			"git add"
+		],
+		"src/**/*.+(ts|tsx|scss|json)": [
+			"prettier --write",
+			"git add"
+		],
+		"src/**/*.+(scss|json)": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"keywords": [],
+	"author": "Mateusz Skwierczyński",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^26.0.0",
+		"@types/node": "^14.0.13",
+		"awesome-typescript-loader": "^5.2.1",
+		"copy-webpack-plugin": "^6.0.2",
+		"css-loader": "^3.5.3",
+		"file-loader": "^6.0.0",
+		"html-loader": "^1.1.0",
+		"html-webpack-plugin": "^4.3.0",
+		"husky": "^4.2.5",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^26.0.1",
+		"lint-staged": "^10.2.9",
+		"node-sass": "^4.14.1",
+		"prettier": "^2.0.5",
+		"react-testing-library": "^8.0.1",
+		"sass-loader": "^8.0.2",
+		"source-map-loader": "^1.0.0",
+		"style-loader": "^1.2.1",
+		"ts-jest": "^26.1.0",
+		"tslint": "^6.1.2",
+		"tslint-config-airbnb": "^5.11.2",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-react": "^5.0.0",
+		"typedoc": "^0.17.7",
+		"typescript": "^3.9.5",
+		"url-loader": "^4.1.0",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"dependencies": {
+		"@types/react": "^16.9.35",
+		"@types/react-dom": "^16.9.8",
+		"@types/react-redux": "^7.1.9",
+		"@types/redux-logger": "^3.0.8",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-redux": "^7.2.0",
+		"redux": "^4.0.5",
+		"redux-logger": "^3.0.6",
+		"redux-saga": "^1.1.3"
+	}
+}
